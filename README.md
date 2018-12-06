@@ -7,19 +7,19 @@ Iowa Data. This is part of a
 [Kaggle Competition](https://www.kaggle.com/c/house-prices-advanced-regression-techniques/leaderboard).
 
 Thus far, the solution uses:
-* Label Encoding for categorical features 
-* Best guesses for missing values based on descriptions of the data or modes for categorical variables
-* Lasso Regression
+* Removing Outliers
+* Feature engineering including mean encoding prices based on neighborhoods
+* Imputation of Missing Data
+* One Hot Encoding
+* Three models ensembled into final prediction: Lasso Regression, SVM Regression, XGBoost Regressor
 
 TODOS:
 * Create more features especially mean encodings. Geographical data could be interesting for example.
-* Try either ordinal encoding for some categorical variables and/or one-hot encoding
-* Do a more thorough job of filling in missing data especially on the test set (or use XGBoost)
-* Use lasso regression as a feature selector for other algorithms (Random Forest, Gradient Boosted Trees)
+* Try either ordinal encoding for some categorical variables
+* Do a more thorough job of filling in missing data especially on the test set using KNeighbors or Regression
 * Create a docker container on docker hub to share my environment with others
 * Upload the model as a Flask app using Zappa
 * Train the model with Amazon SageMaker
-
 
 ## Getting Started
 
